@@ -6,33 +6,36 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import LoginScreen from "./app/views/loginScreen";
+import HomeScreen from "./app/views/homeScreen";
+
+import colors from './app/styles/colors'
 
 const Stack = createStackNavigator();
 
 export default function App() {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator initialRouteName="Login" headerMode="none">
-				<Stack.Screen name="Login">
-					{() => (
-						<LoginScreen
-							title={"Welcome to LoginScreen"}
-							options={{
-								headerShown: false,
-							}}
-						/>
-					)}
-				</Stack.Screen>
+			<Stack.Navigator initialRouteName="Login">
+				<Stack.Screen
+					name="Login"
+					component={LoginScreen}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name="Home"
+					component={HomeScreen}
+					options={{
+						title: "Home",
+						headerStyle: {
+							backgroundColor: colors.ORANGE,
+						},
+						headerTintColor: "#fff",
+						headerTitleStyle: {
+							fontWeight: "bold",
+						},
+					}}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-});
