@@ -27,6 +27,11 @@ To run the application
 ```
 yarn run start
 ```
+Please use the following credentials to login
+```
+userName: 'testUser@stayr.com',
+password: 'helloWorld'
+```
 
 ## Authors
 
