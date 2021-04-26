@@ -28,15 +28,6 @@ To run the application
 yarn run start
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-```
-yarn run test
-```
-
-
 ## Authors
 
 * **Vishal Lakkapathri**
