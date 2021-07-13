@@ -35,7 +35,7 @@ export const LoginScreen = ({ navigation }: LoginScreenProps) => {
 	};
 
 	const renderIfError = renderIf(isError);
-	return (  
+	return (
 		<SafeAreaView style={styles.mainContainer}>
 			<HomeLogo />
 			<Fields onChangeText={handleOnChange} />
